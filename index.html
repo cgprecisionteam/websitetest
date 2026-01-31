@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACCUGEN™ – Digital Dental Lab | Precision CAD CAM Solutions</title>
+    <meta name="description" content="ACCUGEN™ is a premier digital dental lab providing advanced CAD CAM dental solutions and digital prosthetics." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'acc-black': '#0B0B0B',
+              'acc-white': '#FFFFFF',
+              'acc-blue-accent': '#2534f2',
+              'acc-grey-dark': '#171717',
+              'acc-neutral': '#F9F9F9',
+            },
+            fontFamily: {
+              sans: ['"Red Hat Display"', 'sans-serif'],
+            },
+            borderRadius: {
+              'acc': '0px',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Red Hat Display', sans-serif;
+        background-color: #FFFFFF;
+        color: #0B0B0B;
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+      }
+      .transition-standard {
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      /* Continuous Marquee Animation - Seamless Loop */
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 50s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
+      /* Subtle Drop Shadow Utility */
+      .acc-shadow {
+        box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.06);
+      }
+      /* Custom scrollbar reset */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Animation State Utilities */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .scale-reveal {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .scale-reveal.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .animate-marquee {
+          animation: none !important;
+          overflow-x: auto !important;
+          width: 100% !important;
+        }
+        .reveal, .scale-reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
